@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ten Duplicates of Container Div with Description and Add to Cart Button</title>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add margin between containers */
+  }
+  .box {
+    width: 45%; /* Adjust the width as per your requirement */
+    height: auto; /* Set height to auto for dynamic content */
+    border: 1px solid #000; /* Optional: Add border for better visualization */
+    padding: 10px; /* Add padding to box */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: auto; /* Enable scrolling if content exceeds box height */
+    display: flex;
+    flex-direction: column;
+  }
+  .box1 {
+    background-color: #ff0000; /* Red color */
+    color: #fff; /* White text color */
+  }
+  .box2 {
+    background-color: #00ff00; /* Green color */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px; /* Adjust padding as per your requirement */
+  }
+  .box2 img {
+    max-width: calc(50% - 20px); /* Set maximum width for each image */
+    max-height: 50%; /* Set maximum height for each image */
+    margin-bottom: 10px; /* Adjust margin between images */
+  }
+  .big-img {
+    max-width: calc(100% - 20px); /* Set maximum width for the big image */
+    max-height: 100%; /* Set maximum height for the big image */
+  }
+  .add-to-cart-btn {
+    margin-top: auto; /* Push button to the bottom */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make button a block element */
+    width: fit-content; /* Adjust width based on content */
+    margin: auto; /* Center the button horizontally */
+  }
+  .quantity-btn {
+    margin: 5px; /* Add margin around buttons */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+  }
+  .delete-btn {
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+  }
+  #cart {
+    margin-top: 20px; /* Add space between container and cart */
+  }
+</style>
+</head>
+<body>
+
+<!-- Repeat the container div ten times -->
+<div class="container">
+  <div class="box box1">
+    <p>Bulk Budget Hamper</p>
+    <p>R2,650.00/Unit | Sold in Units</p>
+    <ul>
+      <li>5kg x 100% Pure Beef Mince</li>
+      <li>3kg x Beef Goulash</li>
+      <li>3kg x Pre-packed Chicken Fillets</li>
+      <li>3kg x Beef Stir Fry</li>
+      <li>3kg x Beef Tenderised Steak</li>
+      <li>3 packs x Fleisherei Burger Patties</li>
+      <li>3kg x Fleisherei Boerewors</li>
+      <li>2.8kg Sliced Sandwich Ham</li>
+    </ul>
+    <button class="add-to-cart-btn" onclick="addToCart('Bulk Budget Hamper', 2650, this)">Add to Cart</button>
+  </div>
+  <div class="box box2">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4" class="big-img">
+  </div>
+</div>
+
+<!-- Container for The Royal Hamper -->
+<div class="container">
+  <div class="box box1">
+    <p>The Royal Hamper</p>
+    <p>R4,500.00/Unit</p>
+    <ul>
+      <li>10 x 2kg Beef Mince</li>
+      <li>10 × 2kg Butchers Boerewors</li>
+      <li>10 × 500g Chicken Fillets</li>
+      <li>5 × 1kg Rump Steak</li>
+      <li>5 × 1kg Sirloin Steak</li>
+      <li>10 × 1kg Pork Loin Chops</li>
+      <li>5 × 800g Fleisherei Burgers</li>
+      <li>4 x BBQ Chicken Flatty</li>
+    </ul>
+    <button class="add-to-cart-btn" onclick="addToCart('The Royal Hamper', 4500, this)">Add to Cart</button>
+  </div>
+  <div class="box box2">
+    <img src="image5.jpg" alt="Image 5">
+    <img src="image6.jpg" alt="Image 6">
+    <img src="image7.jpg" alt="Image 7">
+    <img src="image8.jpg" alt="Image 8" class="big-img">
+  </div>
+</div>
+
+<!-- Container for Big Save Hamper -->
+<div class="container">
+  <div class="box box1">
+    <p>Big Save Hamper</p>
+    <p>R2,898.00/Unit | Sold in Units</p>
+    <ul>
+      <li>5kg 100% Pure Beef Mince</li>
+      <li>5kg Fleisherei Boerewors</li>
+      <li>5kg Tenderised Beef Steak</li>
+      <li>5kg Beef Goulash</li>
+      <li>5kg Chicken Fillets</li>
+    </ul>
+    <button class="add-to-cart-btn" onclick="addToCart('Big Save Hamper', 2898, this)">Add to Cart</button>
+  </div>
+  <div class="box box2">
+    <img src="image9.jpg" alt="Image 9">
+    <img src="image10.jpg" alt="Image 10">
+    <img src="image11.jpg" alt="Image 11">
+    <img src="image12.jpg" alt="Image 12" class="big-img">
+  </div>
+</div>
+
+<!-- Container for Bachelors Pack -->
+<div class="container">
+  <div class="box box1">
+    <p>Bachelors Pack</p>
+    <p>R740.00/Unit | Sold In Units</p>
+    <ul>
+      <li>1kg x Lamb Braai Chops</li>
+      <li>1kg x Pork Loin Chops</li>
+      <li>1 pack x Bulk Class A Sirloin</li>
+      <li>1 pack x Chicken star pack</li>
+      <li>1kg x Beef Mince</li>
+      <li>1kg x Bulk Fleisherei Boerewors</li>
+      <li>1kg x Bulk Beef Stew</li>
+    </ul>
+    <button class="add-to-cart-btn" onclick="addToCart('Bachelors Pack', 740, this)">Add to Cart</button>
+  </div>
+  <div class="box box2">
+    <!-- Add images here if needed -->
+  </div>
+</div>
+
+<!-- Container for Crunch Time Pack -->
+<div class="container">
+  <div class="box box1">
+    <p>Crunch Time Pack</p>
+    <p>R590.00/Unit | Sold in Units</p>
+    <p>Available on order only.</p>
+    <ul>
+      <li>Beef Mince – 1kg</li>
+      <li>Fleisherei Boerewors – 1kg</li>
+      <li>Tenderised Steak – 1kg</li>
+      <li>Club Steak – 1kg</li>
+      <li>Beef Goulash – 1kg</li>
+    </ul>
+    <button class="add-to-cart-btn" onclick="addToCart('Crunch Time Pack', 590, this)">Add to Cart</button>
+  </div>
+  <div class="box box2">
+    <!-- Add images here if needed -->
+  </div>
+</div>
+
+<!-- Repeat the container div eight more times -->
+<!-- Duplicate the above container div eight more times -->
+
+<!-- Cart -->
+<div id="cart">
+  <h2>Shopping Cart</h2>
+  <div id="cart-items"></div>
+  <p id="total-cost">Total Cost: R0.00</p> <!-- Display total cost -->
+</div>
+
+<script>
+  let cart = [];
+
+  function addToCart(itemName, itemPrice, button) {
+    const existingItem = cart.find(item => item.name === itemName);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+    }
+    button.innerText = "Added to Cart";
+    button.disabled = true; // Disable the button after it's added to cart
+    updateCartDisplay();
+  }
+
+  function updateCartDisplay() {
+    const cartItemsDiv = document.getElementById('cart-items');
+    cartItemsDiv.innerHTML = '';
+    let totalCost = 0; // Initialize total cost
+    cart.forEach((item, index) => {
+      const itemDiv = document.createElement('div');
+      itemDiv.innerHTML = `
+        <p>${item.name} - R${item.price.toFixed(2)} / Unit</p>
+        <p>Quantity: ${item.quantity}</p>
+        <p>Total: R${(item.price * item.quantity).toFixed(2)}</p>
+        <button class="quantity-btn" onclick="increaseQuantity(${index})">+</button>
+        <button class="quantity-btn" onclick="decreaseQuantity(${index})">-</button>
+        <button class="delete-btn" onclick="deleteItem(${index})">Delete</button>
+      `;
+      cartItemsDiv.appendChild(itemDiv);
+      totalCost += item.price * item.quantity; // Add item cost to total
+    });
+    document.getElementById('total-cost').innerText = `Total Cost: R${totalCost.toFixed(2)}`; // Update total cost
+  }
+
+  function increaseQuantity(index) {
+    cart[index].quantity++;
+    updateCartDisplay();
+  }
+
+  function decreaseQuantity(index) {
+    if (cart[index].quantity > 1) {
+      cart[index].quantity--;
+      updateCartDisplay();
+    }
+  }
+
+  function deleteItem(index) {
+    cart.splice(index, 1);
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    addToCartButtons[index].innerText = "Add to Cart";
+    addToCartButtons[index].disabled = false;
+    updateCartDisplay();
+  }
+</script>
+
+</body>
+</html>
