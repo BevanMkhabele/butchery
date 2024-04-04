@@ -7,18 +7,16 @@
 <style>
   .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Set flex direction to column */
     margin-bottom: 20px; /* Add margin between containers */
   }
   .box {
-    width: 45%; /* Adjust the width as per your requirement */
+    width: 100%; /* Set box width to 100% */
     height: auto; /* Set height to auto for dynamic content */
     border: 1px solid #000; /* Optional: Add border for better visualization */
     padding: 10px; /* Add padding to box */
     box-sizing: border-box; /* Include padding in width calculation */
     overflow: auto; /* Enable scrolling if content exceeds box height */
-    display: flex;
-    flex-direction: column;
   }
   .box1 {
     background-color: #ff0000; /* Red color */
@@ -26,10 +24,6 @@
   }
   .box2 {
     background-color: #00ff00; /* Green color */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
     padding: 10px; /* Adjust padding as per your requirement */
   }
   .box2 img {
@@ -42,7 +36,6 @@
     max-height: 100%; /* Set maximum height for the big image */
   }
   .add-to-cart-btn {
-    margin-top: auto; /* Push button to the bottom */
     background-color: #4CAF50; /* Green background */
     color: white; /* White text */
     padding: 10px 20px; /* Padding */
@@ -54,15 +47,16 @@
     display: block; /* Make button a block element */
     width: fit-content; /* Adjust width based on content */
     margin: auto; /* Center the button horizontally */
+    margin-top: 10px; /* Add margin to top */
   }
   .quantity-btn {
-    margin: 5px; /* Add margin around buttons */
     background-color: #4CAF50; /* Green background */
     color: white; /* White text */
     border: none; /* No border */
     padding: 5px 10px; /* Padding */
     cursor: pointer; /* Cursor on hover */
     border-radius: 5px; /* Rounded corners */
+    margin-right: 5px; /* Add margin to right */
   }
   .delete-btn {
     background-color: #f44336; /* Red background */
@@ -81,6 +75,13 @@
 
 <!-- Repeat the container div ten times -->
 <div class="container">
+  <div class="box box2">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <img src="image4.jpg" alt="Image 4" class="big-img">
+    <button class="add-to-cart-btn" onclick="addToCart('Bulk Budget Hamper', 2650, this)">Add to Cart</button>
+  </div>
   <div class="box box1">
     <p>Bulk Budget Hamper</p>
     <p>R2,650.00/Unit | Sold in Units</p>
@@ -94,18 +95,18 @@
       <li>3kg x Fleisherei Boerewors</li>
       <li>2.8kg Sliced Sandwich Ham</li>
     </ul>
-    <button class="add-to-cart-btn" onclick="addToCart('Bulk Budget Hamper', 2650, this)">Add to Cart</button>
-  </div>
-  <div class="box box2">
-    <img src="image1.jpg" alt="Image 1">
-    <img src="image2.jpg" alt="Image 2">
-    <img src="image3.jpg" alt="Image 3">
-    <img src="image4.jpg" alt="Image 4" class="big-img">
   </div>
 </div>
 
 <!-- Container for The Royal Hamper -->
 <div class="container">
+  <div class="box box2">
+    <img src="image5.jpg" alt="Image 5">
+    <img src="image6.jpg" alt="Image 6">
+    <img src="image7.jpg" alt="Image 7">
+    <img src="image8.jpg" alt="Image 8" class="big-img">
+    <button class="add-to-cart-btn" onclick="addToCart('The Royal Hamper', 4500, this)">Add to Cart</button>
+  </div>
   <div class="box box1">
     <p>The Royal Hamper</p>
     <p>R4,500.00/Unit</p>
@@ -119,18 +120,18 @@
       <li>5 × 800g Fleisherei Burgers</li>
       <li>4 x BBQ Chicken Flatty</li>
     </ul>
-    <button class="add-to-cart-btn" onclick="addToCart('The Royal Hamper', 4500, this)">Add to Cart</button>
-  </div>
-  <div class="box box2">
-    <img src="image5.jpg" alt="Image 5">
-    <img src="image6.jpg" alt="Image 6">
-    <img src="image7.jpg" alt="Image 7">
-    <img src="image8.jpg" alt="Image 8" class="big-img">
   </div>
 </div>
 
 <!-- Container for Big Save Hamper -->
 <div class="container">
+  <div class="box box2">
+    <img src="image9.jpg" alt="Image 9">
+    <img src="image10.jpg" alt="Image 10">
+    <img src="image11.jpg" alt="Image 11">
+    <img src="image12.jpg" alt="Image 12" class="big-img">
+    <button class="add-to-cart-btn" onclick="addToCart('Big Save Hamper', 2898, this)">Add to Cart</button>
+  </div>
   <div class="box box1">
     <p>Big Save Hamper</p>
     <p>R2,898.00/Unit | Sold in Units</p>
@@ -141,18 +142,18 @@
       <li>5kg Beef Goulash</li>
       <li>5kg Chicken Fillets</li>
     </ul>
-    <button class="add-to-cart-btn" onclick="addToCart('Big Save Hamper', 2898, this)">Add to Cart</button>
-  </div>
-  <div class="box box2">
-    <img src="image9.jpg" alt="Image 9">
-    <img src="image10.jpg" alt="Image 10">
-    <img src="image11.jpg" alt="Image 11">
-    <img src="image12.jpg" alt="Image 12" class="big-img">
   </div>
 </div>
 
 <!-- Container for Bachelors Pack -->
 <div class="container">
+  <div class="box box2">
+    <img src="image13.jpg" alt="Image 13">
+    <img src="image14.jpg" alt="Image 14">
+    <img src="image15.jpg" alt="Image 15">
+    <img src="image16.jpg" alt="Image 16" class="big-img">
+    <button class="add-to-cart-btn" onclick="addToCart('Bachelors Pack', 740, this)">Add to Cart</button>
+  </div>
   <div class="box box1">
     <p>Bachelors Pack</p>
     <p>R740.00/Unit | Sold In Units</p>
@@ -165,15 +166,18 @@
       <li>1kg x Bulk Fleisherei Boerewors</li>
       <li>1kg x Bulk Beef Stew</li>
     </ul>
-    <button class="add-to-cart-btn" onclick="addToCart('Bachelors Pack', 740, this)">Add to Cart</button>
-  </div>
-  <div class="box box2">
-    <!-- Add images here if needed -->
   </div>
 </div>
 
 <!-- Container for Crunch Time Pack -->
 <div class="container">
+  <div class="box box2">
+    <img src="image17.jpg" alt="Image 17">
+    <img src="image18.jpg" alt="Image 18">
+    <img src="image19.jpg" alt="Image 19">
+    <img src="image20.jpg" alt="Image 20" class="big-img">
+    <button class="add-to-cart-btn" onclick="addToCart('Crunch Time Pack', 590, this)">Add to Cart</button>
+  </div>
   <div class="box box1">
     <p>Crunch Time Pack</p>
     <p>R590.00/Unit | Sold in Units</p>
@@ -185,10 +189,6 @@
       <li>Club Steak – 1kg</li>
       <li>Beef Goulash – 1kg</li>
     </ul>
-    <button class="add-to-cart-btn" onclick="addToCart('Crunch Time Pack', 590, this)">Add to Cart</button>
-  </div>
-  <div class="box box2">
-    <!-- Add images here if needed -->
   </div>
 </div>
 
